@@ -1,6 +1,6 @@
 import { CartWidget } from "../cartWidget/CartWidget";
 import "./Navbar.css";
-import logoCeleste from '../../assets/icons/logoCelesteTienda.png';
+import logoCeleste from '../../assets/icons/logocelesteTienda.png';
 
 export const Navbar = ({ contador }) => {
   return (
