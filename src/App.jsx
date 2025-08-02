@@ -1,5 +1,5 @@
 import { Navbar } from "./components/navbar/Navbar";
-import { ItemListContainer } from "./components/itemListContainer/ItemListContainer";
+import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
 import { useState } from "react";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Navbar contador={contador} />
-      <ItemListContainer saludo="Hola Mundo"/>
+      <ItemListContainer/>
       <button onClick={sumar}>Sumar contador</button>
     </div>
   );
