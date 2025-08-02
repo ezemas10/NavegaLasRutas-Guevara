@@ -1,4 +1,4 @@
-import { Navbar } from "./components/navbar/Navbar";
+import { Navbar } from "./components/layout/navbar/Navbar";
 import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
 import { useState } from "react";
 

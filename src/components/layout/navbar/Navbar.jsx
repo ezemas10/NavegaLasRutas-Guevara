@@ -1,4 +1,4 @@
-import { CartWidget } from "../cartWidget/CartWidget";
+import { CartWidget } from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
 import logoCeleste from '../../assets/icons/logocelesteTienda.png';
 

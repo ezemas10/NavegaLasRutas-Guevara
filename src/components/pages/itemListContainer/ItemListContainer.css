@@ -3,7 +3,7 @@ h1 {
     margin: 5px;
 }
 
-div {
+.products {
     display: "flex";
     gap: "20px";
     justify-content: "center";
