@@ -8,12 +8,20 @@
     margin-bottom: 40px;
 }
 
+.contenedorGeneral{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .products {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     text-align: center;
     padding: 20px;
+    max-width: 1800px;
 }
 

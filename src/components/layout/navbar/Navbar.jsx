@@ -1,6 +1,7 @@
 import { CartWidget } from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
 import logoCelesteTienda from '../../../assets/icons/logocelesteTienda.png';
+import { Link } from "react-router";
 
 export const Navbar = ({ contador }) => {
   return (
@@ -12,7 +13,7 @@ export const Navbar = ({ contador }) => {
             <span className="counterClass"> {contador} </span> 
           </div>
 
-        <a href="#"><img className="logonav" src={logoCelesteTienda} alt="Logo Consultorios Podológicos"/></a>
+        <Link to="/"><img className="logonav" src={logoCelesteTienda} alt="Logo Consultorios Podológicos" /></Link>
 
         <button class="navbar-toggler navbar-buttonpropio" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon navbar-buttonpropio"></span>
@@ -20,19 +21,19 @@ export const Navbar = ({ contador }) => {
             <div class="collapse navbar-collapse navbar-collapse-propia" id="navbarNav">
               <ul class="navbar-nav navegacionpropia">
                 <li class="nav-item">
-                  <a class="nav-link links-propios" href="#">Categoría 1</a>
+                  <Link className="nav-link links-propios" to="/categoria1">Categoría 1</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link links-propios" href="#">Categoría 2</a>
+                  <Link className="nav-link links-propios" to="/categoria1">Categoría 2</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link links-propios" href="#">Categoría 3</a>
+                  <Link className="nav-link links-propios" to="/categoria1">Categoría 3</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link links-propios" href="#">Categoría 4</a>
+                  <Link className="nav-link links-propios" to="/categoria1">Categoría 4</Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link links-propios" href="#">Categoría 5</a>
+                  <Link className="nav-link links-propios" to="/categoria1">Categoría 5</Link>
                 </li>
               </ul>
             </div>
