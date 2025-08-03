@@ -1,22 +1,48 @@
-.logonav {
-  max-width: 400px;
-  margin-right: 5px;
-}
-
 .navbar-estilopropio {
-  background-color: whitesmoke;
-  border-bottom: 1px solid darkgrey;
+  background-color: white;
+  border-bottom: 1px solid grey;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-.custom-navbar .navbar-brand,
-.custom-navbar .nav-link {
-  color: black
+.navbar-estilopropio a {
+  text-decoration: none;
+  color: lightseagreen;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.navbar-estilopropio a:hover {
+  color: lightblue;
+  text-decoration: underline;
 }
 
-.custom-navbar .nav-link:hover {
-  color: black
+.navbar-buttonpropio {
+  --bs-navbar-toggler-focus-width: 0rem;
+}
+
+.navbar-collapse-propia {
+  justify-content: flex-end;
+}
+
+.navegacionpropia {
+  gap: 10px;
+  margin-right: 5px;
+}
+
+.links-propios:focus, .links-propios:hover {
+  color: lightseagreen;
+}
+
+nav li {
+  list-style: none;
+  text-align: right;
+}
+
+.logonav {
+  max-width: 400px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 .counterClass{
@@ -26,4 +52,41 @@
     padding: 6px 12px;
     border: none;
     border-radius: 12px;
+    margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+
+  .logonav {
+  max-width: 200px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+  nav a {
+    font-size: 10px;
+  }
+
+  nav .linksnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-left: 15px;
+  }
+
+  .counterClass{
+    margin-right: 1px;
+}
+
+@media (max-width: 400px) {
+
+  .logonav {
+  max-width: 150px;
+}
+
+}
+
 }
