@@ -51,11 +51,11 @@ export const products = [
   },
   {
     id: "6",
-    titulo: "Jaguar",
+    titulo: "Pasem Freshar",
     precio: "AR$ 7000",
     stock: 100,
-    descripcion: "Pasem Fresh",
-    categoria: "Crema hidratante para pies secos, con karité y urea",
+    descripcion: "Crema hidratante para pies secos, con karité y urea",
+    categoria: "cremas",
     imageUrl:
       "https://res.cloudinary.com/drzhqvhh9/image/upload/v1754163056/product6_ae0pak.webp",
   },

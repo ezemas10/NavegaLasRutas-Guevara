@@ -1,0 +1,49 @@
+.footer {
+  border-top: 1px solid lightblue;
+  margin-top: 40px;
+  background: linear-gradient(to bottom, lightblue, darkcyan);
+}
+
+h5{
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.foot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.logofooter {
+  width: 100%;
+  max-width: 550px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.icons {
+  width: 50%;
+  max-width: 110px;
+  margin-top: 20px;
+}
+
+.linkfoot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  margin-left: 100px;
+}

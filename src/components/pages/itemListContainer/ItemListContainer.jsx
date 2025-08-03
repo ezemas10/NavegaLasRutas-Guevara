@@ -16,12 +16,17 @@ export const ItemListContainer = () => {
   }, []);
 
   return (
-    <div class= "products"> 
-      <h1>Mis productos</h1>
+    <div>
+
+      <h1 className="titulo">Mis productos</h1>
+
+      <div className= "products">
       
-      {items.map((product) => {
-        return <ProductCard key={product.id} product={product} />;
-      })}
+        {items.map((product) => {
+          return <ProductCard key={product.id} product={product} />;
+        })}
+
+      </div>
 
     </div>
   );
