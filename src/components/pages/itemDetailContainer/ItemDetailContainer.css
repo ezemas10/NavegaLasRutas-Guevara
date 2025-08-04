@@ -1,0 +1,52 @@
+.itemDetails {
+
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.itemDetails h3{
+    color: darkgrey;
+}
+
+.buttonDetails{
+    display: inline-block;
+    background-color: lightseagreen;
+    color:white;
+    padding: 6px 12px;
+    border: 10px;
+    border-radius: 12px;
+    margin-left: 50px;
+    box-shadow: 0 10px 10px darkgray;
+    font-weight: bold;
+    font-family: "Comic Neue", serif;
+    text-align: center;
+}
+
+.buttonDetails:hover{
+  outline: 2px solid black;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
+}
+
+.imagenDetails{
+    max-width: 300px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px lightslategray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imagenDetails:hover{
+  outline: 2px solid lightseagreen;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
+}
