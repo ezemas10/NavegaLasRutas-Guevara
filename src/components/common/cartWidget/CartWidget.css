@@ -1,5 +1,3 @@
-.carrito{
-}
 
 .cartContainer{
     position: relative;
@@ -9,22 +7,23 @@
     align-items: center;
     padding-top: 0px;
     padding-bottom: 20px;
-    margin: 15px;
+    margin: 0px 20px 15px 15px;
     
 }
 
 .cartStyle{
     position: absolute;
-    bottom: -2px;
+    bottom: -15px;
+    left: -5px;
     background-color: darkgray;
     color: white;
     border-radius: 50%;
-    min-width: 20px;
-    height: 20px;
+    min-width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     padding: 0 4px;
 }

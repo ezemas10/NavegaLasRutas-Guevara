@@ -4,12 +4,24 @@
 
 .cardClass{
   border: 2px solid lightblue;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 4px 10px;
   display: inline-block;
   box-shadow: 0 5px 10px lightblue;
   margin-bottom: 40px;
   max-width: 400px;
+}
+
+.cardClass:hover{
+  outline: 2px solid lightseagreen;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
+}
+
+.cardLinks{
+  text-decoration: none;
+  color: inherit;
 }
 
 .cardClass h1 {
