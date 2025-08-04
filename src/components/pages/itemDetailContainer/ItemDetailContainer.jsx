@@ -22,6 +22,7 @@ const ItemDetailContainer = ({ contador, setContador } = {}) => {
           <h1>{product.titulo}</h1>
           <h3>{product.descripcion}</h3>
           <a href={product.imageUrl} target="_blank"> <img className="imagenDetails" src={product.imageUrl} alt={product.titulo} /></a>
+          <h3>{product.precio}</h3>
         </div>
         <button onClick={sumar} className="buttonDetails">Agregar al carrito</button>
     </div>
