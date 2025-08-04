@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className= "footer">
 
-        <div class="foot-container">
+        <div className="foot-container">
 
             <figure>
                 <a href="../index.html"><img className="logofooter" src={logoCeleste} alt="Logo Consultorios Podológicos"/></a>

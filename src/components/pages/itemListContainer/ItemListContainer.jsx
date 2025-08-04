@@ -7,18 +7,18 @@ import { useParams } from "react-router";
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const { name } = useParams();
+  const { nombre } = useParams();
 
   useEffect(() => {
     const productosFiltrados = products.filter(
-      (producto) => producto.categoria === name
+      (producto) => producto.categoria === nombre
     );
     const getProducts = new Promise((resolve, reject) => {
-      resolve(products);
+      resolve(nombre ? productosFiltrados : products);
     });
 
     getProducts.then((res) => setItems(res));
-  }, []);
+  }, [nombre]);
 
   return (
 
