@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import { Navbar } from "./components/layout/navbar/Navbar";
 import { Footer } from "./components/layout/footer/Footer";
 import Cart from "./components/pages/cart/Cart";
@@ -16,8 +16,8 @@ function App() {
       <Navbar contador={contador} />
 
       <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/categoria/:nombre" element={<ItemListContainer />} />
+        <Route path="/" element={<ItemListContainer contador={contador} setContador={setContador} />} />
+        <Route path="/categoria/:nombre" element={<ItemListContainer contador={contador} setContador={setContador} />} />
         <Route path="/detalle/:id" element={<ItemDetailContainer contador={contador} setContador={setContador} />} />
         <Route path="/carrito" element={<Cart />} />
         <Route path="*" element={<NotFound />} />

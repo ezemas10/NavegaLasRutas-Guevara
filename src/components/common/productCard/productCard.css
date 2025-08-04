@@ -5,11 +5,15 @@
 .cardClass{
   border: 2px solid lightblue;
   border-radius: 15px;
-  padding: 4px 10px;
+  padding: 4px 10px 20px 10px;
   display: inline-block;
   box-shadow: 0 5px 10px lightblue;
   margin-bottom: 40px;
   max-width: 400px;
+}
+
+.cardButton{
+  margin: 15px 40px 40px 0px;
 }
 
 .cardClass:hover{
@@ -55,4 +59,25 @@
  margin-top: 10px; 
  max-width: 200px;
  margin-bottom: 20px;
+}
+
+.buttonCard{
+    display: inline-block;
+    background-color: lightseagreen;
+    color:white;
+    padding: 6px 12px;
+    border: 10px;
+    border-radius: 12px;
+    margin-left: 50px;
+    box-shadow: 0 10px 10px darkgray;
+    font-weight: bold;
+    font-family: "Comic Neue", serif;
+    text-align: center;
+}
+
+.buttonCard:hover{
+  outline: 2px solid black;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
 }

@@ -2,6 +2,7 @@ import "./Footer.css";
 import logoCeleste from '../../../assets/icons/logoceleste.png';
 import logoInstagram from '../../../assets/icons/instagram.png';
 import logoWhatsapp from '../../../assets/icons/whatsapp.png';
+import { Link } from "react-router";
 
 export const Footer = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer = () => {
         <div className="foot-container">
 
             <figure>
-                <a href="../index.html"><img className="logofooter" src={logoCeleste} alt="Logo Consultorios Podológicos"/></a>
+                <Link to="/"><img className="logofooter" src={logoCeleste} alt="Logo Consultorios Podológicos" /></Link>
             </figure>
 
             <div className="linkfoot">

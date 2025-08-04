@@ -2,12 +2,23 @@
 import "./productCard.css";
 import { Link } from "react-router";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, contador, setContador }) => {
   const { id, titulo, descripcion, precio , stock, categoria, imageUrl} = product;
+
+  const sumar = () => {
+    if (setContador) setContador(contador + 1);
+  };
+
   return (
     
     <div className="cardClass">
+
+      <div className="cardButton">
+          <button onClick={sumar} className="buttonCard">Agregar al carrito</button>
+      </div>
+
       <Link to={`/detalle/${id}`} className="cardLinks">
+
           <div>
 
             <h1>{titulo}</h1>
