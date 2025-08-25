@@ -14,32 +14,38 @@ const CartContextProvider = ({ children }) => {
 
   const addToCart = (producto) => {
 
-  setCart((prev) => {
-    const i = prev.findIndex((p) => p.id === producto.id);
-    const agregar = producto.cantidad ;
+    let agregado = 0; 
 
-    let enCarrito; 
-    
-    if (i !== -1) { 
-      enCarrito = prev[i].cantidad; 
-    } 
-    
-    else enCarrito = 0;
+      setCart((prev) => {
+        const i = prev.findIndex((p) => p.id === producto.id);
+        const agregar = producto.cantidad ;
 
-    const disponible = Math.max(0, producto.stock - enCarrito);
+        let enCarrito; 
+        
+        if (i !== -1) { 
+          enCarrito = prev[i].cantidad; 
+        } 
+        
+        else enCarrito = 0;
 
-    const paraAgregar = Math.min(agregar, disponible);
+        const disponible = Math.max(0, producto.stock - enCarrito);
 
-    if (paraAgregar <= 0) return prev;
+        const paraAgregar = Math.min(agregar, disponible);
 
-    if (i === -1) return [...prev, { ...producto, cantidad: paraAgregar }];
+        agregado = paraAgregar
 
-    const next = [...prev];
+        if (paraAgregar <= 0) return prev;
 
-    next[i] = { ...next[i], cantidad: enCarrito + paraAgregar };
-    
-    return next;
-  });
+        if (i === -1) return [...prev, { ...producto, cantidad: paraAgregar }];
+
+        const next = [...prev];
+
+        next[i] = { ...next[i], cantidad: enCarrito + paraAgregar };
+        
+        return next;
+      });
+
+    return agregado;
 
 };
 

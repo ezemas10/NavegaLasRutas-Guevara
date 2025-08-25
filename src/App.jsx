@@ -8,6 +8,9 @@ import { useState } from "react";
 import NotFound from "./components/pages/notFound/NotFound";
 import CartContextProvider from "./context/CartContext";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
 
   return (
@@ -25,10 +28,14 @@ function App() {
             <Route path="*" element={<NotFound />} />
 
         </Routes>
+
+        <ToastContainer position="top-right" autoClose={2000} />
+
       </CartContextProvider>
 
       <Footer/>
     </BrowserRouter>
+    
   );
 }
 
