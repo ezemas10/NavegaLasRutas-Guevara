@@ -23,10 +23,12 @@ const ProductCard = ({ product }) => {
             <img className= "imagenes" src = {imageUrl}/>
             <h2>Descripción: </h2>
             <h3>{descripcion}</h3>
-            <h2>Precio:</h2> 
-            <h3>{precio}</h3>
-            <h2>Stock:</h2> 
-            <h3>{stock}</h3>
+            <span>
+              <h2>Precio:</h2> <h3>AR$</h3> <h3>{precio}</h3>
+            </span>
+            <span>
+              <h2>Stock:</h2> <h3>{stock}</h3>
+            </span>
 
           </div>
 

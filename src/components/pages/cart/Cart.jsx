@@ -18,8 +18,8 @@ const Cart = () => {
           <div
             key={producto.id}
           >
-            <h2>{producto.title}</h2>
-            <h2> ${producto.price}</h2>
+            <h2>{producto.titulo}</h2>
+            <h2> ${producto.precio}</h2>
             <h2> x{producto.cantidad}</h2>
             <button onClick={() => removeById(producto.id)}>eliminar</button>
           </div>

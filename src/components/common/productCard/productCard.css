@@ -76,3 +76,14 @@
   transform: scale(1.1);
   transition: ease-out 1s;
 }
+
+span{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardClass span h3{
+  margin-bottom: 0px;
+  font-size: 25px;
+}
