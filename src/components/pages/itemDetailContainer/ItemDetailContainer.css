@@ -54,10 +54,12 @@
   transition: ease-out 1s;
 }
 
-span{
-  display: flex;
-  align-items: center;
-  gap: 5px;
+span h2{
+  display: inline;
+}
+
+span h3{
+  display: inline;
 }
 
 .componenteContador h2{

@@ -22,9 +22,9 @@ const ItemDetailContainer = () => {
           <h1>{product.titulo}</h1>
           <h3>{product.descripcion}</h3>
           <a href={product.imageUrl} target="_blank"> <img className="imagenDetails" src={product.imageUrl} alt={product.titulo} /></a>
-          <h3>{product.precio}</h3>
+          <h3>AR$ {product.precio}</h3>
           <span>
-          <h2>Stock: </h2> <h3>{product.stock}</h3>
+          <h2>Stock:  </h2> <h3>{product.stock}</h3>
           </span>
           <div className="componenteContador"> <Contador product={product} /> </div>
         </div>

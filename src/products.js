@@ -2,17 +2,17 @@ export const products = [
   {
     id: "1",
     titulo: "Curapiel",
-    precio: "15000",
+    precio: 15000,
+    stock: 3,
     descripcion: "Crema para el cuidado y tratamiento de la piel, con propiedades calmantes.",
+    categoria: "cremas",
     imageUrl:
       "https://res.cloudinary.com/drzhqvhh9/image/upload/product1_m8jhwm.webp",
-    stock: 3,
-    categoria: "cremas",
   },
   {
     id: "2",
     titulo: "Curauña",
-    precio: "20000",
+    precio: 20000,
     stock: 5,
     descripcion: "Preparado líquido de uso externo formulado para tratar hongos en las uñas",
     categoria: "preparados",
@@ -22,7 +22,7 @@ export const products = [
   {
     id: "3",
     titulo: "Ortesis Polidigital",
-    precio: "5000",
+    precio: 5000,
     stock: 4,
     descripcion:"Gel Polímero",
     categoria: "ortopedia",
@@ -32,7 +32,7 @@ export const products = [
   {
     id: "4",
     titulo: "Actium Cuidado Facial",
-    precio: "8000",
+    precio: 8000,
     stock: 5,
     descripcion: "Crema facial que hidrata, nutre y mejora la firmeza y luminosidad de la piel.",
     categoria: "cremas",
@@ -42,7 +42,7 @@ export const products = [
   {
     id: "5",
     titulo: "Dermacler Crema",
-    precio: "9000",
+    precio: 9000,
     stock: 10,
     descripcion: "Crema nutritiva que humecta, tonifica y mejora la firmeza y elasticidad de la piel.",
     categoria: "cremas",
@@ -52,7 +52,7 @@ export const products = [
   {
     id: "6",
     titulo: "Pasem Freshar",
-    precio: "7000",
+    precio: 7000,
     stock: 6,
     descripcion: "Crema hidratante para pies secos, con karité y urea",
     categoria: "cremas",
@@ -62,7 +62,7 @@ export const products = [
   {
     id: "7",
     titulo: "Diabecler HHH",
-    precio: "8000",
+    precio: 8000,
     stock: 8,
     descripcion: "Emulsión hidratante para piel muy seca o dañada.",
     categoria: "cremas",
@@ -72,7 +72,7 @@ export const products = [
   {
     id: "8",
     titulo: "Pieloldo",
-    precio: "6000",
+    precio: 6000,
     stock: 10,
     descripcion: "Polvo desodorante para pies extra absobente.",
     categoria: "ortopedia",
