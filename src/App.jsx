@@ -6,22 +6,26 @@ import { ItemListContainer } from "./components/pages/itemListContainer/ItemList
 import ItemDetailContainer from './components/pages/itemDetailContainer/ItemDetailContainer';
 import { useState } from "react";
 import NotFound from "./components/pages/notFound/NotFound";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
-  
-  const [contador, setContador] = useState(0);
 
   return (
       <BrowserRouter>
-      <Navbar contador={contador} />
 
-      <Routes>
-        <Route path="/" element={<ItemListContainer contador={contador} setContador={setContador} />} />
-        <Route path="/categoria/:nombre" element={<ItemListContainer contador={contador} setContador={setContador} />} />
-        <Route path="/detalle/:id" element={<ItemDetailContainer contador={contador} setContador={setContador} />} />
-        <Route path="/carrito" element={<Cart />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <CartContextProvider>
+        <Navbar/>
+
+        <Routes>
+          
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/categoria/:nombre" element={<ItemListContainer /> } />
+            <Route path="/detalle/:id" element={<ItemDetailContainer /> } />
+            <Route path="/carrito" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+
+        </Routes>
+      </CartContextProvider>
 
       <Footer/>
     </BrowserRouter>

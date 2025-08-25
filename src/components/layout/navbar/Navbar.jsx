@@ -1,5 +1,6 @@
-import { CartWidget } from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
+
+import { CartWidget } from "../../common/cartWidget/CartWidget";
 import logoCelesteTienda from '../../../assets/icons/logocelesteTienda.png';
 import { Link } from "react-router";
 
@@ -9,8 +10,7 @@ export const Navbar = ({contador}) => {
       <div className="container-fluid">
 
         <div className="d-flex align-items-center gap-3">
-            <CartWidget contador={contador}/>
-            {/* <span className="counterClass"> {contador} </span>  */}
+            <CartWidget/>
           </div>
 
         <Link to="/"><img className="logonav" src={logoCelesteTienda} alt="Logo Consultorios Podológicos" /></Link>
@@ -29,12 +29,12 @@ export const Navbar = ({contador}) => {
                 <li className="nav-item">
                   <Link className="nav-link links-propios" to="/categoria/preparados">Preparados</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link links-propios" to="/categoria/categoria4">Categoría 4</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link links-propios" to="/categoria/categoria5">Categoría 5</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 

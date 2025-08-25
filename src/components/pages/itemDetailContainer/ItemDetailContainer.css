@@ -11,23 +11,26 @@
 
 .itemDetails h3{
     color: darkgrey;
+    font-size: 35px;
+    
 }
 
-.buttonDetails{
+.itemDetails button{
+    margin: 10px;
     display: inline-block;
     background-color: lightseagreen;
     color:white;
     padding: 6px 12px;
     border: 10px;
     border-radius: 12px;
-    margin-left: 50px;
     box-shadow: 0 10px 10px darkgray;
+    font-size: 30px;
     font-weight: bold;
     font-family: "Comic Neue", serif;
     text-align: center;
 }
 
-.buttonDetails:hover{
+.itemDetails button:hover{
   outline: 2px solid black;
   border-radius: 20px;
   transform: scale(1.1);
@@ -49,4 +52,31 @@
   border-radius: 20px;
   transform: scale(1.1);
   transition: ease-out 1s;
+}
+
+span{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.componenteContador h2{
+  display: inline;
+}
+
+.componenteContador h3{
+  display: inline;
+}
+
+.componenteContador button{
+  margin: 10px;
+  margin-top: 10px;
+}
+
+.componenteContador button:hover{
+  outline: 0px;
+}
+
+.componenteContador div{
+  margin-bottom: 20px;
 }

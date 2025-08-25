@@ -1,4 +1,5 @@
 import "./Footer.css";
+
 import logoCeleste from '../../../assets/icons/logoceleste.png';
 import logoInstagram from '../../../assets/icons/instagram.png';
 import logoWhatsapp from '../../../assets/icons/whatsapp.png';

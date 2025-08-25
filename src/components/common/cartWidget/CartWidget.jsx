@@ -1,26 +1,25 @@
-import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router";
 import "./CartWidget.css";
 
-export const CartWidget = ({contador}) => {
+import { FaShoppingCart } from "react-icons/fa";
+import { useContext } from "react";
+import { Link } from "react-router";
+import { CartContext } from "../../../context/CartContext";
+
+export const CartWidget = () => {
+
+  const { getCantidadTotal } = useContext(CartContext);
+  let total = getCantidadTotal();
+
   return (
 
     <Link to="/carrito">
         <div className="cartContainer">
             <FaShoppingCart/>
           <div className="cartStyle">
-             <span className="counterClass"> {contador} </span>
+             <span className="counterClass"> {total} </span>
           </div>
         </div>
     </Link>
 
   );
 };
-
-// export const CartWidget = () => {
-//   return (
-//     <div>
-//       <FaShoppingCart />
-//     </div>
-//   );
-// };

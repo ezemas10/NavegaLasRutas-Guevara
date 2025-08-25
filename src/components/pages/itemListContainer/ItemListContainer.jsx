@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { products } from "../../../products";
 import ProductCard from "../../common/productCard/ProductCard";
 import { useParams } from "react-router";
+import { CartContext } from "../../../context/CartContext";
+import Contador from "../../common/contador/Contador";
 
-export const ItemListContainer = ({ contador, setContador }) => {
+export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { nombre } = useParams();
 
@@ -31,7 +33,7 @@ export const ItemListContainer = ({ contador, setContador }) => {
           <div className= "products">
           
             {items.map((product) => {
-              return <ProductCard key={product.id} product={product} contador={contador} setContador={setContador}/>;
+              return <ProductCard key={product.id} product={product}/>;
             })}
 
           </div>
@@ -40,11 +42,3 @@ export const ItemListContainer = ({ contador, setContador }) => {
     </div>
   );
 };
-
-// export const ItemListContainer = ({saludo}) => {
-//   return (
-//   <div> 
-//     <h1>{saludo}</h1>
-//   </div>
-//   )
-// };

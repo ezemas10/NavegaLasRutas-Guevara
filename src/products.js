@@ -6,14 +6,14 @@ export const products = [
     descripcion: "Crema para el cuidado y tratamiento de la piel, con propiedades calmantes.",
     imageUrl:
       "https://res.cloudinary.com/drzhqvhh9/image/upload/product1_m8jhwm.webp",
-    stock: 100,
+    stock: 3,
     categoria: "cremas",
   },
   {
     id: "2",
     titulo: "Curauña",
     precio: "AR$ 20000",
-    stock: 100,
+    stock: 5,
     descripcion: "Preparado líquido de uso externo formulado para tratar hongos en las uñas",
     categoria: "preparados",
     imageUrl:
@@ -23,7 +23,7 @@ export const products = [
     id: "3",
     titulo: "Ortesis Polidigital",
     precio: "AR$ 5000",
-    stock: 100,
+    stock: 4,
     descripcion:"Gel Polímero",
     categoria: "ortopedia",
     imageUrl:
@@ -33,7 +33,7 @@ export const products = [
     id: "4",
     titulo: "Actium Cuidado Facial",
     precio: "AR$ 8000",
-    stock: 100,
+    stock: 5,
     descripcion: "Crema facial que hidrata, nutre y mejora la firmeza y luminosidad de la piel.",
     categoria: "cremas",
     imageUrl:
@@ -43,7 +43,7 @@ export const products = [
     id: "5",
     titulo: "Dermacler Crema",
     precio: "AR$ 9000",
-    stock: 100,
+    stock: 10,
     descripcion: "Crema nutritiva que humecta, tonifica y mejora la firmeza y elasticidad de la piel.",
     categoria: "cremas",
     imageUrl:
@@ -53,7 +53,7 @@ export const products = [
     id: "6",
     titulo: "Pasem Freshar",
     precio: "AR$ 7000",
-    stock: 100,
+    stock: 6,
     descripcion: "Crema hidratante para pies secos, con karité y urea",
     categoria: "cremas",
     imageUrl:
@@ -63,7 +63,7 @@ export const products = [
     id: "7",
     titulo: "Diabecler HHH",
     precio: "AR$ 8000",
-    stock: 100,
+    stock: 8,
     descripcion: "Emulsión hidratante para piel muy seca o dañada.",
     categoria: "cremas",
     imageUrl:
@@ -73,7 +73,7 @@ export const products = [
     id: "8",
     titulo: "Pieloldo",
     precio: "AR$ 6000",
-    stock: 100,
+    stock: 10,
     descripcion: "Polvo desodorante para pies extra absobente.",
     categoria: "ortopedia",
     imageUrl:

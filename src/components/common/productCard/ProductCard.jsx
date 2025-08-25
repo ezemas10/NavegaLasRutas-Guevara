@@ -1,20 +1,18 @@
 
 import "./productCard.css";
+
 import { Link } from "react-router";
+import Contador from "../../common/contador/Contador";
 
-const ProductCard = ({ product, contador, setContador }) => {
+const ProductCard = ({ product }) => {
   const { id, titulo, descripcion, precio , stock, categoria, imageUrl} = product;
-
-  const sumar = () => {
-    if (setContador) setContador(contador + 1);
-  };
 
   return (
     
     <div className="cardClass">
 
-      <div className="cardButton">
-          <button onClick={sumar} className="buttonCard">Agregar al carrito</button>
+      <div className="buttonCard">
+          <Contador product={product} mostrar="Boton Agregar"/>
       </div>
 
       <Link to={`/detalle/${id}`} className="cardLinks">
@@ -27,7 +25,7 @@ const ProductCard = ({ product, contador, setContador }) => {
             <h3>{descripcion}</h3>
             <h2>Precio:</h2> 
             <h3>{precio}</h3>
-            <h2>Stock: </h2>
+            <h2>Stock:</h2> 
             <h3>{stock}</h3>
 
           </div>
