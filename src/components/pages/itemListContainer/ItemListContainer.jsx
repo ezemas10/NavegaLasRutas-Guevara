@@ -25,11 +25,21 @@ export const ItemListContainer = () => {
     getProducts.then((res) => setItems(res));
   }, [nombre]);
 
+  const cargarProductos = () => {
+     let productsCollection = collection(db, "products"); // referenciar una collecion
+
+     products.forEach((producto) => {
+       addDoc(productsCollection, producto);
+     });
+   };
+
   return (
 
     <div>
 
         <h1 className="titulo">Todos los Productos</h1>
+
+        <button onClick={cargarProductos}>Cargar productos</button>
 
         <div className="contenedorGeneral">
 
