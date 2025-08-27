@@ -2,7 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 
-.carritoContainer h1{
+.carritoGeneral{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.carritoGeneral h1{
     color: black;
     font-size: 50px;
     font-weight: bold;
@@ -10,4 +17,94 @@
     text-align: center;
     margin-top: 130px;
     margin-bottom: 40px;
+}
+
+.carritoContainer button{
+    margin: 10px;
+    display: inline-block;
+    background-color: darkred;
+    color:white;
+    padding: 6px 12px;
+    border: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 10px darkgray;
+    font-weight: bold;
+    font-family: "Comic Neue", serif;
+    text-align: center;
+}
+
+.carritoContainer button:hover{
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
+}
+
+.carritoContainer h2{
+    text-align: center;
+}
+
+
+.carritoContainer h3 {
+  color: darkgray;
+  font-size: 25px;
+  font-family: "roboto", sans-serif;
+  text-align: center;
+}
+
+.carritoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 1800px;
+    margin: 0 auto; 
+}
+
+.cardCartContainer{
+    max-width: 350px;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+    padding: 4px 10px 20px 10px;
+    display: inline-block;
+    box-shadow: 0 5px 10px lightblue;
+    margin-bottom: 40px;
+}
+
+.cardCartContainer:hover{
+  outline: 2px solid lightseagreen;
+  border-radius: 20px;
+  transform: scale(1.1);
+  transition: ease-out 1s;
+}
+
+.buttonClean{
+  margin: 10px;
+  display: inline-block;
+  background-color: darkred;
+  color:white;
+  padding: 6px 12px;
+  border: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px darkgray;
+  font-weight: bold;
+  font-family: "Comic Neue", serif;
+  text-align: center;
+}
+
+.buttonFinish{
+  margin: 10px;
+  display: inline-block;
+  background-color: darkcyan;
+  color:white;
+  padding: 6px 12px;
+  border: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px darkgray;
+  font-weight: bold;
+  font-family: "Comic Neue", serif;
+  text-align: center;
+  text-decoration: none; 
 }

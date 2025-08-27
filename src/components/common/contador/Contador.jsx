@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useMemo, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 
@@ -13,28 +13,42 @@ const Contador = ({ product, mostrar }) => {
     setStock(disponible);
   }, [product.stock, disponible]);
 
-  console.log(contador);
-  console.log(product.stock);
-  console.log(stock);
+  useEffect(() => {
+  if (stock === 0) setContador(0);
+}, [stock]);
 
-  
+  // console.log(contador);
+  // console.log(product.stock);
+  // console.log(stock);
+
+
   const sumar = () => {
+    if (stock === 0) {
+      toast.error("No hay más stock");
+      return;
+    }   
+
     if (contador < stock) {
       setContador(contador + 1);
     } 
-    else if (contador === 0) (setContador(0));
+    else if (contador === 0) setContador(0);
     else {
       toast.warn("Stock Límite");
     }
-  };
+ };
 
 
   const restar = () => {
-    if (contador === 0) (setContador(0));
+    if (stock === 0) {
+      toast.error("No hay más stock");
+      return;
+    }      
+
+    if (contador === 0) setContador(0);
     else setContador(contador - 1);
-  };
+ };
 
-
+ 
   const agregarAlCarrito = () => {
     const agregado = addToCart({ ...product, cantidad: contador });
     

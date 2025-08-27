@@ -1,5 +1,8 @@
 import './ItemListContainer.css';
 
+import { db } from "../../../firebaseConfig";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+
 import { useEffect, useState } from "react";
 import { products } from "../../../products";
 import ProductCard from "../../common/productCard/ProductCard";
@@ -26,7 +29,7 @@ export const ItemListContainer = () => {
 
     <div>
 
-        <h1 className="titulo">Mis productos</h1>
+        <h1 className="titulo">Todos los Productos</h1>
 
         <div className="contenedorGeneral">
 

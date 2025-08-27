@@ -21,7 +21,7 @@ export const Navbar = ({contador}) => {
             <div className="collapse navbar-collapse navbar-collapse-propia" id="navbarNav">
               <ul className="navbar-nav navegacionpropia">
                 <li className="nav-item">
-                  <Link className="nav-link links-propios" to="/categoria/ortopedia">Ortopedia</Link>
+                  <Link className="nav-link links-propios" to="/categoria/ortopedia">Productos Ortopédicos</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link links-propios" to="/categoria/cremas">Cremas</Link>

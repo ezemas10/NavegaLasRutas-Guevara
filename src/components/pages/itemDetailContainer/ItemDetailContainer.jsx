@@ -1,5 +1,8 @@
 import "./ItemDetailContainer.css";
 
+import { db } from "../../../firebaseConfig";
+import { collection, getDoc, doc } from "firebase/firestore";
+
 import { useContext, useEffect, useState } from "react";
 import { products } from "../../../products";
 import { useParams } from "react-router";
