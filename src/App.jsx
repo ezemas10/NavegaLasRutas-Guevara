@@ -33,7 +33,7 @@ function App() {
 
         </Routes>
 
-        <ToastContainer position="top-right" autoClose={2000} />
+        <ToastContainer position="top-left" autoClose={2000} />
 
       </CartContextProvider>
 

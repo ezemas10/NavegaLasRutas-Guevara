@@ -37,14 +37,27 @@
   transition: ease-out 1s;
 }
 
-.imagenDetails{
-    max-width: 300px;
-    width: 100%;
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px lightslategray;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.itemDetails a {
+  display: inline-block;   
+  width: auto;             
+}
+
+.imagenDetails {
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px lightslategray;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.itemDetails a {
+  align-self: flex-start;
+  display: inline-block;
+  width: auto;
 }
 
 .imagenDetails:hover{
@@ -81,4 +94,12 @@ span h3{
 
 .componenteContador div{
   margin-bottom: 20px;
+}
+
+.spinner {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
 }

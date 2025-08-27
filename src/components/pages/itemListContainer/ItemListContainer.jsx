@@ -1,7 +1,8 @@
 import './ItemListContainer.css';
+import { ClockLoader } from "react-spinners";
 
 import { db } from "../../../firebaseConfig";
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 import { useEffect, useState } from "react";
 import { products } from "../../../products";
@@ -14,44 +15,82 @@ export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { nombre } = useParams();
 
+  const [isLoading, setIsLoading] = useState(false); 
+  const [error, setError] = useState({                  
+    errorStatus: 0,
+    errorMessage: "",
+  });
+  const [showAlert, setShowAlert] = useState({          
+    show: false,
+    textAlert: "",
+  });
+  
   useEffect(() => {
-    const productosFiltrados = products.filter(
-      (producto) => producto.categoria === nombre
-    );
-    const getProducts = new Promise((resolve, reject) => {
-      resolve(nombre ? productosFiltrados : products);
-    });
+    
+    setIsLoading(true);                                 
 
-    getProducts.then((res) => setItems(res));
+  //   const productosFiltrados = products.filter(
+  //     (producto) => producto.categoria === nombre
+  //   );
+  //   const getProducts = new Promise((resolve, reject) => {
+  //     resolve(nombre ? productosFiltrados : products);
+  //   });
+
+  //   getProducts.then((res) => setItems(res));
+  // }, [nombre]);
+
+    let productosCollection = collection(db, "products");
+
+    let consulta = productosCollection;
+
+    if (nombre) {
+      let filtrado = query(productosCollection, where("category", "==", nombre));
+      consulta = filtrado;
+    }
+    
+    let getProducts = getDocs(consulta);
+
+    getProducts.then((res) => {
+
+      let array = res.docs.map((elemento) => {
+        return { id: elemento.id, ...elemento.data() };
+      });
+      setItems(array);
+      
+     })
+
+    .finally(() => { setTimeout(() => setIsLoading(false), 1000);});
+
   }, [nombre]);
 
-  const cargarProductos = () => {
-     let productsCollection = collection(db, "products"); // referenciar una collecion
-
-     products.forEach((producto) => {
-       addDoc(productsCollection, producto);
-     });
-   };
 
   return (
 
-    <div>
+  <div>
+    <h1 className="titulo">Todos los Productos</h1>
 
-        <h1 className="titulo">Todos los Productos</h1>
+    <div className="contenedorGeneral">
 
-        <button onClick={cargarProductos}>Cargar productos</button>
+      <div className="products">
 
-        <div className="contenedorGeneral">
+        {isLoading ? (
+          <ClockLoader color="#008B8B" size={50} />
+        ) : (
+          items.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        )}
 
-          <div className= "products">
-          
-            {items.map((product) => {
-              return <ProductCard key={product.id} product={product}/>;
-            })}
+      </div>
 
-          </div>
-
-        </div>
     </div>
+
+    {!isLoading && error.errorMessage && <h1>{error.errorMessage}</h1>}
+
+    {showAlert.show && alert(showAlert.textAlert)}
+
+    </div>
+
   );
+
 };
