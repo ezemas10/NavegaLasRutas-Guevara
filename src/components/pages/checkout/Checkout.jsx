@@ -1,3 +1,5 @@
+import "./Checkout.css";
+
 import { db } from "../../../firebaseConfig";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 
@@ -5,25 +7,28 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 
 const Checkout = () => {
-  // nombre, telefono , email
+
   const [user, setUser] = useState({
-    nombre: "",
-    telefono: "",
-    email: "",
+    Nombre: "",
+    Telefono: "",
+    Email: "",
   });
 
-  const { cart, getCantidadTotal, resetCart } = useContext(CartContext);
+  const { cart, getCantidadTotal, getPrecioTotal, resetCart } = useContext(CartContext);
 
   const [orderId, setOrderId] = useState(null);
 
   const handleSubmit = (evento) => {
     evento.preventDefault();
    
-    let total = getCantidadTotal();
+    let totalQ = getCantidadTotal();
+    let totalPrice = getPrecioTotal();
+
     let objetoCompra = {
-      buyer: user,
+      comprador: user,
       items: cart,
-      total: total,
+      total_Cantidad: totalQ,
+      total_Precio: totalPrice,
     };
 
     let ordersCollection = collection(db, "orders");
@@ -50,34 +55,64 @@ const Checkout = () => {
   };
 
   return (
-    <div>
-      <h1>Aca el formulario de compra</h1>
-      {orderId ? (
-        <h2>El numero de orden es {orderId}</h2>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Nombre"
-            name="nombre"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="telefono"
-            name="telefono"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="email"
-            name="email"
-            onChange={handleChange}
-          />
-          <button>Comprar</button>
-        </form>
-      )}
-    </div>
+  <div className="container my-5">
+    <h1 className="titulo text-center mb-4">Formulario de Compra</h1>
+
+    {orderId ? (
+      <div className="alert alert-success text-center">
+        <h3 className="checkoutFont">Número de orden de compra:</h3>
+        <h2>{orderId}</h2>
+      </div>
+        ) : (
+          <form className="formulario-content mx-auto col-md-6" onSubmit={handleSubmit}>
+            <div className="form-estilopropio mb-3">
+              <label htmlFor="inputNombre" className="form-label"></label>
+              <input
+                id="inputNombre"
+                type="text"
+                className="form-control label-estilopropio"
+                placeholder="Nombre"
+                name="Nombre"
+                value={user.Nombre}
+                onChange={handleChange}
+                required
+                />
+            </div>
+
+            <div className="form-estilopropio mb-3">
+              <label htmlFor="inputTelefono" className="form-label"></label>
+              <input
+                id="inputTelefono"
+                type="text"
+                className="form-control label-estilopropio"
+                placeholder="Teléfono"
+                name="Telefono"
+                value={user.Telefono}
+                onChange={handleChange}
+                required
+                />
+              </div>
+
+            <div className="form-estilopropio mb-3">
+              <label htmlFor="inputEmail" className="form-label"></label>
+              <input
+                id="inputEmail"
+                type="email"
+                className="form-control label-estilopropio"
+                placeholder="Email"
+                name="Email"
+                value={user.Email}
+                onChange={handleChange}
+                required
+              />
+              </div>
+
+            <button type="submit" className="button-propio">
+              Comprar
+            </button>
+          </form>
+        )}
+  </div>
   );
 };
 
