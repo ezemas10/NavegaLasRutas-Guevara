@@ -44,7 +44,7 @@ export const ItemListContainer = () => {
     let consulta = productosCollection;
 
     if (nombre) {
-      let filtrado = query(productosCollection, where("category", "==", nombre));
+      let filtrado = query(productosCollection, where("categoria", "==", nombre));
       consulta = filtrado;
     }
     
@@ -67,7 +67,7 @@ export const ItemListContainer = () => {
   return (
 
   <div>
-    <h1 className="titulo">Todos los Productos</h1>
+    <h1 className="titulo">Productos</h1>
 
     <div className="contenedorGeneral">
 
